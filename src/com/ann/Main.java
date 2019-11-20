@@ -13,9 +13,9 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int[] nums = {1,2,3,4,5};
+        int[] nums = { 7, 4, 5, 6, 9, 10, 4, 1, 6, 5, 9};
         String s = "()(()()";
         LeetCode122MaxProfit2 model = new LeetCode122MaxProfit2();
-        System.out.println(model.maxProfit(nums));
+        System.out.println(model.maxProfit2(nums));
     }
 }

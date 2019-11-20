@@ -26,8 +26,20 @@ public class LeetCode122MaxProfit2 {
      * @return
      */
     public int maxProfit2(int[] prices) {
-        int maxProfit = 0;
-
+        int maxProfit = 0, valley = 0, peek = 0;
+        for (int i = 1; i < prices.length; ++i) {
+            if (prices[i] < prices[i - 1]) {
+                if (peek != 0) {
+                    maxProfit += prices[peek] - prices[valley];
+                    peek = 0;
+                }
+                valley = i;
+            } else {
+                peek = i;
+            }
+        }
+        if (peek == prices.length - 1)
+            maxProfit += prices[peek] - prices[valley];
         return maxProfit;
     }
 }

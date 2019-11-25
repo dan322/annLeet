@@ -13,10 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        String s = "()(()()";
+      /*  String s = "()(()()";
         int[] nums = { 1};
         LeetCode213Rob2 model = new LeetCode213Rob2();
-        System.out.println(model.rob(nums));
+        System.out.println(model.rob(nums));*/
        /* LeetCode208Trie trie = new LeetCode208Trie();
         trie.insert("apple");
         System.out.println(trie.search("apple"));
@@ -24,11 +24,11 @@ public class Main {
         System.out.println(trie.startsWith("app"));
         trie.insert("app");
         System.out.println(trie.search("app"));*/
-       /*char[][] board = {{'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'}, {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}};
+       char[][] board = {{'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'}, {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}};
        String[] words = {"oath", "pea", "eat", "rain"};
        LeetCode212FindWords model = new LeetCode212FindWords();
-        List<String> wordList = model.findWords(board, words);
+        List<String> wordList = model.findWords1(board, words);
        for (String str: wordList)
-           System.out.println(str);*/
+           System.out.println(str);
     }
 }

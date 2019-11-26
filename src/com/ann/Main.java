@@ -53,7 +53,7 @@ public class Main {
         System.out.println(model.minimumTotal(triangle));
         */
 
-        LeetCode231PowerOfTwo model = new LeetCode231PowerOfTwo();
-        System.out.println(model.isPowerOfTwo(6));
+       LeetCode190ReverseBits model = new LeetCode190ReverseBits();
+        System.out.println(model.reverseBits(43261596));
     }
 }

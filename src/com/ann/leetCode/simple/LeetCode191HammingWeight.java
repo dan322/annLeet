@@ -1,0 +1,28 @@
+package com.ann.leetCode.simple;
+
+public class LeetCode191HammingWeight {
+
+    /**
+     * n & (n - 1) : 消除最低位的1
+     * @param n
+     * @return
+     */
+    public int hammingWeight(int n) {
+        int hammingWeight = 0;
+        while (n != 0) {
+            hammingWeight++;
+            n &= n - 1;
+        }
+        return hammingWeight;
+    }
+
+    public int hammingWeight1(int n) {
+        int hammingWeight = 0;
+        for (int i = 0; i < 32; i++) {
+            if ((n & 1) == 1)
+                hammingWeight++;
+            n = n >> 1;
+        }
+        return hammingWeight;
+    }
+}

@@ -2,7 +2,7 @@ package com.ann.sortTwo;
 
 import com.ann.sort.AbstractSort;
 
-public class BuddySort extends AbstractSort {
+public class BubbleSort extends AbstractSort {
 
     @Override
     public void doSort(int[] arr) {

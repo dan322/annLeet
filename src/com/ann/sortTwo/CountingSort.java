@@ -1,4 +1,15 @@
 package com.ann.sortTwo;
 
-public class CountingSort {
+import com.ann.sort.AbstractSort;
+
+public class CountingSort extends AbstractSort {
+
+    /**
+     * todo ann
+     * @param arr
+     */
+    @Override
+    public void doSort(int[] arr) {
+
+    }
 }

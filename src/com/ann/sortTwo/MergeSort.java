@@ -1,4 +1,15 @@
 package com.ann.sortTwo;
 
-public class MergeSort {
+import com.ann.sort.AbstractSort;
+
+public class MergeSort extends AbstractSort {
+
+    /**
+     * todo ann
+     * @param arr
+     */
+    @Override
+    public void doSort(int[] arr) {
+
+    }
 }

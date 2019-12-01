@@ -1,4 +1,4 @@
-package hello.althor.sort;
+package com.ann.sort;
 
 public class BubbleSort extends AbstractSort{
 

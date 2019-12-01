@@ -1,6 +1,7 @@
 package com.ann;
 
 //import com.ann.leetCode.medium.LeetCode153FindMin;
+import com.ann.leetCode.hard.LeetCode493ReversePairs;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
 
@@ -53,7 +54,7 @@ public class Main {
         System.out.println(model.minimumTotal(triangle));
         */
 
-       LeetCode146LRUCache1 model = new LeetCode146LRUCache1(10);
+       /*LeetCode146LRUCache1 model = new LeetCode146LRUCache1(10);
        model.put(10, 13);
        model.put(3, 17);
        model.put(6, 11);
@@ -108,12 +109,31 @@ public class Main {
 //       model.put(4, 1);
 //        System.out.println(model.get(1));
 //        System.out.println(model.get(2));
-      /* model.put(3, 3);
+        model.put(3, 3);
         System.out.println(model.get(1));
         model.put(4, 4);
         System.out.println(model.get(1));
         System.out.println(model.get(2));
         System.out.println(model.get(3));
         System.out.println(model.get(4));*/
+     /*  LeetCode1122RelativeSortArray model = new LeetCode1122RelativeSortArray();
+       int[] arr1 = {2,3,1,3,2,4,6,7,9,2,19};
+       int[] arr2 = {2,1,4,3,9,6};
+       for (int num: model.relativeSortArray1(arr1, arr2))
+           System.out.println(num);*/
+//       int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+
+      /*
+      int[][] intervals = {{1, 4}, {4, 5}};
+       LeetCode56MergeInterval model = new LeetCode56MergeInterval();
+       for (int[] nums: model.merge(intervals)) {
+           System.out.println(nums[0]);
+           System.out.println(nums[1]);
+           System.out.println(" ");
+       }
+       */
+        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
+        int[] nums = {1, 3, 2, 3, 1};
+        System.out.println(model.reversePairs(nums));
     }
 }

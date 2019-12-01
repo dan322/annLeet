@@ -12,6 +12,9 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
+        String s = ")(";
+        LeetCode32LongestValidParenthese model = new LeetCode32LongestValidParenthese();
+        System.out.println(model.longestValidParentheses2(s));
       /*  String s = "()(()()";
         int[] nums = { 1};
         LeetCode213Rob2 model = new LeetCode213Rob2();
@@ -132,8 +135,8 @@ public class Main {
            System.out.println(" ");
        }
        */
-        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
-        int[] nums = {1, 3, 2, 3, 1};
-        System.out.println(model.reversePairs(nums));
+//        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
+//        int[] nums = {1, 3, 2, 3, 1};
+//        System.out.println(model.reversePairs(nums));
     }
 }

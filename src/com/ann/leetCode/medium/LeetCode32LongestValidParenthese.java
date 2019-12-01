@@ -38,4 +38,35 @@ public class LeetCode32LongestValidParenthese {
         }
         return maxN;
     }
+
+    public int longestValidParentheses2(String s) {
+        int maxN = 0, left = 0, right = 0;
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; ++i) {
+            if (chars[i] == '(') {
+                left++;
+            } else {
+                right++;
+            }
+            if (left == right) {
+                maxN = Math.max(maxN, right << 1);
+            } else if (right > left) {
+                left = right = 0;
+            }
+        }
+        left = right = 0;
+        for (int j = chars.length - 1; j >= 0; --j) {
+            if (chars[j] == '(') {
+                left++;
+            } else {
+                right++;
+            }
+            if (left == right) {
+                maxN = Math.max(maxN, right << 1);
+            } else if (left > right) {
+                left = right = 0;
+            }
+        }
+        return maxN;
+    }
 }

@@ -18,8 +18,12 @@ public class Main {
         LeetCode32LongestValidParenthese model = new LeetCode32LongestValidParenthese();
         System.out.println(model.longestValidParentheses2(s));*/
         QuickSort model = new QuickSort();
-        model.setTotal(50);
-        int[] arr = model.generateArr();
+        model.setTotal(10);
+//        int[] arr = model.generateArr();
+        int[] arr = {63532, 48793, 62818, 3391, 45343, 35698, 27283, 73921, 31448, 21412};
+        for (int value: arr)
+            System.out.println(value);
+        System.out.println("hello");
         model.doSort(arr);
         for (int value: arr)
             System.out.println(value);

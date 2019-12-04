@@ -5,7 +5,9 @@ import com.ann.sort.AbstractSort;
 public class QuickSort extends AbstractSort {
 
     /**
-     * todo ann
+     * 时间复杂度 O（Nlogn)
+     * 空间复杂度 o(1) (不算系统站消耗)
+     * 稳定
      * @param arr
      */
     @Override
@@ -21,22 +23,20 @@ public class QuickSort extends AbstractSort {
         int pivot = ((end - start) >> 1) + start;
         //sort arr[i] < arr[pivot] then 将arr[i]放在arr[pivot]左边，否则放在arr[pivot]右边
         int pivotEle = arr[pivot], leftIndex = start;
+        arr[pivot] = arr[end];
+        arr[end] = pivotEle;
         for (int i = start; i <= end; ++i) {
             if (arr[i] < pivotEle) {
-                if (i > leftIndex) {
-                    int temp = arr[i];
-                    arr[i] = arr[leftIndex];
-                    arr[leftIndex] = temp;
-                }
-                leftIndex++;
+                int temp = arr[i];
+                arr[i] = arr[leftIndex];
+                arr[leftIndex++] = temp;
             }
         }
-        if (leftIndex < pivot)
-            arr[pivot] = arr[leftIndex];
+        arr[end] = arr[leftIndex];
         arr[leftIndex] = pivotEle;
 
         if (leftIndex > start)
-            quickSort(arr, start, leftIndex );
+            quickSort(arr, start, leftIndex - 1);
         if (leftIndex < end)
             quickSort(arr, leftIndex + 1, end);
     }

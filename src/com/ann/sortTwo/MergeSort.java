@@ -12,4 +12,9 @@ public class MergeSort extends AbstractSort {
     public void doSort(int[] arr) {
 
     }
+
+    public void mergeSort(int arr, int left, int right) {
+        int pivot = ((right - left) >> 1) + left;
+
+    }
 }

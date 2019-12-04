@@ -4,6 +4,8 @@ package com.ann;
 import com.ann.leetCode.hard.LeetCode493ReversePairs;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
+import com.ann.sortTwo.QuickSort;
+//import com.ann.QuickSort;
 
 import java.util.*;
 //import com.ann.leetCode.simple.LeetCode860LemonadeChange;
@@ -12,9 +14,15 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        String s = ")(";
+       /* String s = ")(";
         LeetCode32LongestValidParenthese model = new LeetCode32LongestValidParenthese();
-        System.out.println(model.longestValidParentheses2(s));
+        System.out.println(model.longestValidParentheses2(s));*/
+        QuickSort model = new QuickSort();
+        model.setTotal(50);
+        int[] arr = model.generateArr();
+        model.doSort(arr);
+        for (int value: arr)
+            System.out.println(value);
       /*  String s = "()(()()";
         int[] nums = { 1};
         LeetCode213Rob2 model = new LeetCode213Rob2();

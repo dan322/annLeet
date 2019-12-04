@@ -1,4 +1,5 @@
 package com.ann.sort;
+
 public class QuickSort extends AbstractSort {
 
     /**

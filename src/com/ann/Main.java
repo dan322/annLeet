@@ -4,6 +4,7 @@ package com.ann;
 import com.ann.leetCode.hard.LeetCode493ReversePairs;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
+import com.ann.sortTwo.MergeSort;
 import com.ann.sortTwo.QuickSort;
 //import com.ann.QuickSort;
 
@@ -17,16 +18,32 @@ public class Main {
        /* String s = ")(";
         LeetCode32LongestValidParenthese model = new LeetCode32LongestValidParenthese();
         System.out.println(model.longestValidParentheses2(s));*/
-        QuickSort model = new QuickSort();
-        model.setTotal(10);
-//        int[] arr = model.generateArr();
-        int[] arr = {63532, 48793, 62818, 3391, 45343, 35698, 27283, 73921, 31448, 21412};
+        MergeSort model = new MergeSort();
+        model.setTotal(40);
+        int[] arr = model.generateArr();
+//        int[] arr = {86474, 42437, 18279, 28637};
         for (int value: arr)
             System.out.println(value);
         System.out.println("hello");
         model.doSort(arr);
-        for (int value: arr)
-            System.out.println(value);
+//        for (int value: arr)
+//            System.out.println(value);
+      /* LeetCode56MergeInterval model = new LeetCode56MergeInterval();
+//       int[][] intervals = {{1, 4}, {0, 4}};
+//       int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+       int[][] intervals = {{4, 5}, {2, 4}, {4, 6}, {3, 4}, {0, 0}, {1, 1}, {3, 5}, {2, 2}};
+       for (int[] interval: model.merge1(intervals)) {
+           System.out.print(interval[0]);
+           System.out.print(" ");
+           System.out.println(interval[1]);
+       }*/
+
+   /*   LeetCode242ValidAnagram model = new LeetCode242ValidAnagram();
+//      char[] chars = {'h','e', 'l', 'l', 'o'};
+      char[] chars = {'H','a','n','n','a','h'};
+      String s = "car",
+              t = "rac";
+      System.out.println(model.isAnagram(s, t));*/
       /*  String s = "()(()()";
         int[] nums = { 1};
         LeetCode213Rob2 model = new LeetCode213Rob2();

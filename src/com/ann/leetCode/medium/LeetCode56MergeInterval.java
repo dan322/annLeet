@@ -98,7 +98,7 @@ public class LeetCode56MergeInterval {
     }
 
     /**
-     * #3
+     * #3 todo ann sort bound (left and right)
      * @param intervals
      * @return
      */

@@ -44,18 +44,6 @@ public class LeetCode212FindWords {
         visited[ir][ic] = false;
     }
 
-    /**
-     * todo ann
-     * #1 use Trie
-     * @param board
-     * @param words
-     * @return
-     */
-    public List<String> findWords1(char[][] board, String[] words) {
-        List<String> wordList = new ArrayList();
-
-        return wordList;
-    }
 
     /**
      * use TRIE
@@ -63,7 +51,7 @@ public class LeetCode212FindWords {
      * @param words
      * @return
      */
-    public List<String> findWords1(char[][] board, String[] words) {
+    public List<String> findWords2(char[][] board, String[] words) {
         List<String> wordList = new ArrayList();
         // form a trie
         TrieNode root = new TrieNode();

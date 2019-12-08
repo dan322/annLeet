@@ -7,36 +7,54 @@ import java.util.*;
 public class LeetCode212FindWords {
 
     /**
-     * 回溯
+     * 回溯  DFS
      * @param board
      * @param words
      * @return
      */
     public List<String> findWords(char[][] board, String[] words) {
         List<String> wordList = new ArrayList();
-        HashSet<String> visited = new HashSet();
         HashSet<String> wordSet = new HashSet();
-        for (String word: words)
+        boolean[][] visited = new boolean[board.length][board[0].length];
+        int maxLen = 0;
+        for (String word: words) {
             wordSet.add(word);
+            if (word.length() > maxLen)
+                maxLen = word.length();
+        }
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board[0].length; ++j) {
-                searchWord("", i, j, board, wordSet, wordList, visited);
+                searchWord("", i, j, board, wordSet, wordList, visited, maxLen);
             }
         }
         return wordList;
     }
 
-    public void searchWord(String s, int ic, int ir, char[][] board, HashSet<String> wordSet, List<String> wordList, HashSet<String> visited) {
-        if (ic < 0 || ir > board[0].length - 1 || visited.contains(s))
+    public void searchWord(String s, int ir, int ic, char[][] board, HashSet<String> wordSet, List<String> wordList, boolean[][] visited, int maxLen) {
+        if (ir < 0 || ir >= board.length || ic < 0 || ic > board[0].length - 1 || visited[ir][ic] || s.length() > maxLen)
             return;
-        String str = new StringBuffer(s).append(board[ic][ir]).toString();
+        String str = new StringBuffer(s).append(board[ir][ic]).toString();
         if (wordSet.contains(str))
-            wordList.add(s);
+            wordList.add(str);
+        visited[ir][ic] = true;
         int[][] direction = {{0, 0, 1, -1}, {1, -1, 0, 0}};
         for (int i = 0; i < direction[0].length; ++i) {
-            searchWord(str, ic + direction[0][i], ir + direction[1][i] , board , wordSet, wordList, visited);
+            searchWord(str, ir + direction[0][i], ic + direction[1][i] , board , wordSet, wordList, visited, maxLen);
         }
-        visited.add(str);
+        visited[ir][ic] = false;
+    }
+
+    /**
+     * todo ann
+     * #1 use Trie
+     * @param board
+     * @param words
+     * @return
+     */
+    public List<String> findWords1(char[][] board, String[] words) {
+        List<String> wordList = new ArrayList();
+
+        return wordList;
     }
 
     /**

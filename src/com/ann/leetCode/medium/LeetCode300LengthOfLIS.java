@@ -11,7 +11,6 @@ public class LeetCode300LengthOfLIS {
      * @return
      */
     public int lengthOfLIS(int[] nums) {
-        Arrays.binarySearch(, );
         return 0;
     }
 }

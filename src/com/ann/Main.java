@@ -18,14 +18,14 @@ public class Main {
        /* String s = ")(";
         LeetCode32LongestValidParenthese model = new LeetCode32LongestValidParenthese();
         System.out.println(model.longestValidParentheses2(s));*/
-        MergeSort model = new MergeSort();
+  /*      MergeSort model = new MergeSort();
         model.setTotal(40);
         int[] arr = model.generateArr();
-//        int[] arr = {86474, 42437, 18279, 28637};
+        //int[] arr = {86474, 42437, 18279, 28637};
         for (int value: arr)
             System.out.println(value);
         System.out.println("hello");
-        model.doSort(arr);
+        model.doSort(arr);*/
 //        for (int value: arr)
 //            System.out.println(value);
       /* LeetCode56MergeInterval model = new LeetCode56MergeInterval();
@@ -167,5 +167,8 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
+        LeetCode_709_ToLowerCase model = new LeetCode_709_ToLowerCase();
+        String str = "al&phaBET";
+        System.out.println(model.toLowerCase(str));
     }
 }

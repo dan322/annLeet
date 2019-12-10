@@ -167,8 +167,11 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode_709_ToLowerCase model = new LeetCode_709_ToLowerCase();
-        String str = "al&phaBET";
-        System.out.println(model.toLowerCase(str));
+        LeetCode541ReverseStr model = new LeetCode541ReverseStr();
+        String str = "hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdf" +
+                     "ehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjql" +
+                "imjkfnqcqnajmebeddqsgl";
+        int k = 1239;
+        System.out.println(model.reverseStr(str, k));
     }
 }

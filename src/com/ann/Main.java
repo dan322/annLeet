@@ -167,11 +167,8 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode541ReverseStr model = new LeetCode541ReverseStr();
-        String str = "hyzqyljrnigxvdtneasepfahmtyhlohwxmkqcdf" +
-                     "ehybknvdmfrfvtbsovjbdhevlfxpdaovjgunjql" +
-                "imjkfnqcqnajmebeddqsgl";
-        int k = 1239;
-        System.out.println(model.reverseStr(str, k));
+        LeetCode557ReverseWord model = new LeetCode557ReverseWord();
+        String str = " Let's take LeetCode contest ";
+        System.out.println(model.reverseWords3(str));
     }
 }

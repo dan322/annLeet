@@ -24,4 +24,26 @@ public class LeetCode541ReverseStr {
         }
         return new StringBuffer().append(chars).toString();
     }
+
+    /**
+     * #2 improvement of #1
+     * Concise and clear
+     * @param s
+     * @param k
+     * @return
+     */
+    public String reverseStr1(String s, int k) {
+        char[] charArr = s.toCharArray();
+        int start, end, length = charArr.length;
+        for (int i = 0; i < length; i += 2 * k) {
+            start = i;
+            end = Math.min(start + k - 1, length - 1);
+            while (start < end) {
+                char temp = charArr[start];
+                charArr[start++] = charArr[end];
+                charArr[end--] = temp;
+            }
+        }
+        return String.valueOf(charArr);
+    }
 }

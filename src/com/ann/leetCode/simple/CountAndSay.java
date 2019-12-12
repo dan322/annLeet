@@ -1,11 +1,10 @@
-package hello.althor.leetCode.simple;
+package com.ann.leetCode.simple;
 
 import javax.xml.bind.SchemaOutputResolver;
 import java.util.Stack;
 
 public class CountAndSay {
 
-    // TODO
     public static void main(String[] args)
     {
         CountAndSay countAndSay = new CountAndSay();

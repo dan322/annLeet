@@ -167,8 +167,15 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode557ReverseWord model = new LeetCode557ReverseWord();
+        LeetCode221MaximalSquare model = new LeetCode221MaximalSquare();
         String str = " Let's take LeetCode contest ";
-        System.out.println(model.reverseWords3(str));
+        char[][] matrix = {
+                {'1', '1', '1', '1', '1', '1', '1', '1'},
+                {'1', '1', '1', '1', '1', '1', '1', '0'},
+                {'1', '1', '1', '1', '1', '1', '1', '0'},
+                {'1', '1', '1', '1', '1', '0', '0', '0'},
+                {'0', '1', '1', '1', '1', '0', '0', '0'},
+        };
+        System.out.println(model.maximalSquare2(matrix));
     }
 }

@@ -59,6 +59,24 @@ public class LeetCode91NumDecoding {
         return prevLastOne + prevLastTwo;
     }
 
+    public int numDecodings6(String s) {
+        char[] numsChar = s.toCharArray();
+        int prevLastOne = 1, prevLastTwo = 0, currNum, numTwo = 0, tmp;
+        for (int i = 0; i < numsChar.length; ++i) {
+            currNum = numsChar[i] - '0';
+            numTwo = numsChar[i - 1]  - '0';
+            tmp = numTwo * 10 + currNum;
+            if (currNum == 0)
+                prevLastOne = 0;
+            if (tmp >= 10 && tmp < 27) {
+                prevLastOne += prevLastTwo;
+                prevLastTwo = prevLastOne - prevLastTwo;
+            } else
+                prevLastTwo = prevLastOne;
+        }
+        return prevLastOne;
+    }
+
     /**
      * 动态递归
      * DP方程: dp[i][0]: i长度的字符串中，最后一位解码的方案数    dp[i][1]： i长度的字符串中，最后两位一起解码的方案数
@@ -89,27 +107,29 @@ public class LeetCode91NumDecoding {
     }
 
     /**
-     * todo ann 递归
+     * or add memo
      * @param s
      * @return
      */
     public int numDecodings3(String s) {
         char[] numsChar = s.toCharArray();
-        if (numsChar[0] == '0')
-            return 0;
-        int currNum, numTwo;
-        int[][] dp = new int[numsChar.length][2];
-        dp[0][0] = 1;
-        dp[0][1] = 0;
-        for (int i = 1; i < numsChar.length; ++i) {
-            currNum = numsChar[i] - '0';
-            numTwo = (numsChar[i - 1]  - '0') * 10 + currNum;
-            if (numTwo >= 10 && numTwo <= 26)
-                dp[i][1] = dp[i - 1][0];
-            if (currNum > 0)
-                dp[i][0] = dp[i - 1][0] + dp[i - 1][1];
-        }
-        return dp[numsChar.length - 1][0] + dp[numsChar.length - 1][1];
+        return decoding(numsChar, 0, 1);
+    }
+
+    public int decoding(char[] charArr, int start, int prevDecodeNum) {
+        if (start >= charArr.length)
+            return prevDecodeNum;
+        int total = 0;
+        if ((charArr[start] - '0') != 0)
+            total += decoding(charArr, start + 1, prevDecodeNum);
+        else
+            return total;
+        if (start >= charArr.length - 1)
+            return total;
+        int temp = (charArr[start] - '0') * 10 + (charArr[start + 1] - '0');
+        if (10 <= temp && temp < 27)
+            total += decoding(charArr, start + 2, prevDecodeNum);
+        return total;
     }
 
     /**

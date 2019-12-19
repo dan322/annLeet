@@ -45,19 +45,21 @@ public class LeetCode151ReverseWords {
      */
     public String reverseWords2(String s) {
         StringBuilder stringBuilder = new StringBuilder();
-        int wordStart = 0, wordEnd = s.length() - 1;
+        int wordEnd = s.length() - 1, wordStart = 0;
         char[] charArr = s.toCharArray();
         boolean prevIsEmpty = true;
-        for (int i = s.length() - 1; i >= 0; i--) {
+        for (int i = wordEnd; i >= 0; i--) {
             if (prevIsEmpty && charArr[i] != ' ') {
                 wordEnd = i;
                 prevIsEmpty = false;
-            } else if (!prevIsEmpty && (charArr[i] == ' ' || i == 0)) {
+                if (wordStart > wordEnd)
+                    stringBuilder.append(' ');
+            }
+            if (!prevIsEmpty && (i == 0 || charArr[i - 1] == ' ')) {
                 wordStart = i - 1;
                 while (wordStart < wordEnd) {
                     stringBuilder.append(charArr[++wordStart]);
                 }
-                stringBuilder.append(' ');
                 prevIsEmpty = true;
             }
         }

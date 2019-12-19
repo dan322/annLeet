@@ -5,26 +5,11 @@ import java.util.Queue;
 
 public class LeetCode151ReverseWords {
     /**
-     * todo ann
+     * #0
      * @param s
      * @return
      */
     public String reverseWords(String s) {
-        /*StringBuilder stringBuilder = new StringBuilder();
-        Queue<Character> characterQueue = new LinkedList<>();
-        boolean prevIsEmpty = true;
-        for (int i = s.length(); i > 0; --i) {
-            if (s.charAt(i - 1) != ' ') {
-                characterQueue.offer(s.charAt(i - 1));
-                prevIsEmpty = false;
-            } else if (!prevIsEmpty) {
-                characterQueue.offer(s.charAt(i - 1));
-                prevIsEmpty = true;
-            }
-        }
-        while (!characterQueue.isEmpty())
-            stringBuilder.append(characterQueue.poll());
-        return stringBuilder.toString();*/
         String[] strArr = s.trim().split(" +");
         StringBuilder stringBuilder = new StringBuilder();
         int index = strArr.length;
@@ -36,6 +21,11 @@ public class LeetCode151ReverseWords {
         return stringBuilder.toString();
     }
 
+    /**
+     * #1 improvement of #0
+     * @param s
+     * @return
+     */
     public String reverseWords1(String s) {
         String[] strArr = s.trim().split(" ");
         StringBuilder stringBuilder = new StringBuilder();
@@ -49,12 +39,28 @@ public class LeetCode151ReverseWords {
     }
 
     /**
-     * todo ann 
+     * #2
      * @param s
      * @return
      */
-    public String reverseWord2(String s) {
-
-        return s;
+    public String reverseWords2(String s) {
+        StringBuilder stringBuilder = new StringBuilder();
+        int wordStart = 0, wordEnd = s.length() - 1;
+        char[] charArr = s.toCharArray();
+        boolean prevIsEmpty = true;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (prevIsEmpty && charArr[i] != ' ') {
+                wordEnd = i;
+                prevIsEmpty = false;
+            } else if (!prevIsEmpty && (charArr[i] == ' ' || i == 0)) {
+                wordStart = i - 1;
+                while (wordStart < wordEnd) {
+                    stringBuilder.append(charArr[++wordStart]);
+                }
+                stringBuilder.append(' ');
+                prevIsEmpty = true;
+            }
+        }
+        return stringBuilder.toString();
     }
 }

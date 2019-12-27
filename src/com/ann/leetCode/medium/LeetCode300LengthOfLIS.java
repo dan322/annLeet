@@ -6,7 +6,8 @@ public class LeetCode300LengthOfLIS {
     int[] increaseNum;
 
     /**
-     * [10,9,2,5,3,7,101,18]
+     * 时间复杂度：O(nlogn)
+     * 空间复杂度： O(n)
      * @param nums
      * @return
      */

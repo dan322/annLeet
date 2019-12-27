@@ -36,7 +36,7 @@ public class LeetCode300LengthOfLIS {
                 right = middle - 1;
             }
         }
-        int index = increaseNum[left] > num ? left: left + 1;
+        int index = increaseNum[left] >= num ? left: left + 1;
         increaseNum[index] = num;
         return index + 1;
     }

@@ -167,8 +167,8 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode151ReverseWords model = new LeetCode151ReverseWords();
-        String str = "the sky is  blue!   ";
+        LeetCode300LengthOfLIS model = new LeetCode300LengthOfLIS();
+        String str = " hello  world!  ";
         char[][] matrix = {
                 {'1', '1', '1', '1', '1', '1', '1', '1'},
                 {'1', '1', '1', '1', '1', '1', '1', '0'},
@@ -176,6 +176,7 @@ public class Main {
                 {'1', '1', '1', '1', '1', '0', '0', '0'},
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
-        System.out.println(model.reverseWords(str));
+        int[] nums = {10,9,2,5,3,7,101,18};
+        System.out.println(model.lengthOfLIS(nums));
     }
 }

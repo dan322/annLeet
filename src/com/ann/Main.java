@@ -177,6 +177,6 @@ public class Main {
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
         int[] nums = {10,9,2,5,3,7,101,18};
-        System.out.println(model.lengthOfLIS(nums));
+        System.out.println(model.lengthOfLIS1(nums));
     }
 }

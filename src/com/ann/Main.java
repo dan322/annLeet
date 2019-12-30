@@ -167,8 +167,8 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode300LengthOfLIS model = new LeetCode300LengthOfLIS();
-        String str = " hello  world!  ";
+        LeetCode8MyAtoi model = new LeetCode8MyAtoi();
+        String str = " +23457de798977534532";
         char[][] matrix = {
                 {'1', '1', '1', '1', '1', '1', '1', '1'},
                 {'1', '1', '1', '1', '1', '1', '1', '0'},
@@ -177,6 +177,6 @@ public class Main {
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
         int[] nums = {10,9,2,5,3,7,101,18};
-        System.out.println(model.lengthOfLIS1(nums));
+        System.out.println(model.myAtoi2(str));
     }
 }

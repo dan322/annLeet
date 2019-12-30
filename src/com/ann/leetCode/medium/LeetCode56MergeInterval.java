@@ -33,7 +33,6 @@ public class LeetCode56MergeInterval {
     }
 
     /**
-     * todo ann
      * @param intervals
      * @return
      */
@@ -68,7 +67,6 @@ public class LeetCode56MergeInterval {
     }
 
     /**
-     * todo ann
      * List to array
      * @param intervals
      * @return

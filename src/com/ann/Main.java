@@ -2,6 +2,7 @@ package com.ann;
 
 //import com.ann.leetCode.medium.LeetCode153FindMin;
 import com.ann.leetCode.hard.LeetCode123MaxProfit3;
+import com.ann.leetCode.hard.LeetCode188MaxProfit4;
 import com.ann.leetCode.hard.LeetCode493ReversePairs;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
@@ -168,7 +169,7 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode309MaxProfit model = new LeetCode309MaxProfit();
+        LeetCode188MaxProfit4 model = new LeetCode188MaxProfit4();
         String str = " +23457de798977534532";
         char[][] matrix = {
                 {'1', '1', '1', '1', '1', '1', '1', '1'},
@@ -177,7 +178,7 @@ public class Main {
                 {'1', '1', '1', '1', '1', '0', '0', '0'},
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
-        int[] nums = {1, 10, 3, 4, 2, 9};
-        System.out.println(model.maxProfit1(nums));
+        int[] nums = {3,2,6,5,0,3};
+        System.out.println(model.maxProfit(1, nums));
     }
 }

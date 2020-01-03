@@ -5,6 +5,8 @@ public class LeetCode309MaxProfit {
      * input: 1,2,3,0,2
      * output: 3
      * cooldown: 1 day
+     * maxProfits[i][0]: reset in i day, the max profit can get
+     * maxProfits[i][1]: sell in i day, the max profit can get
      * @param prices
      * @return
      */
@@ -21,6 +23,11 @@ public class LeetCode309MaxProfit {
         return Math.max(maxProfits[prices.length - 1][0], maxProfits[prices.length - 1][1]);
     }
 
+    /**
+     * maxProfits[i]: in i day, the max profit it can get
+     * @param prices
+     * @return
+     */
     public int maxProfit1(int[] prices)
     {
         if (prices.length < 2)
@@ -36,6 +43,19 @@ public class LeetCode309MaxProfit {
                 maxProfits[i] = maxProfits[i - 1];
             }
         }
+        return maxProfits[prices.length - 1];
+    }
+
+    /**
+     * todo ann
+     * @param prices
+     * @return
+     */
+    public int maxProfit2(int[] prices)
+    {
+        if (prices.length < 2)
+            return 0;
+
         return 0;
     }
 }

@@ -178,6 +178,6 @@ public class Main {
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
         int[] nums = {1, 10, 3, 4, 2, 9};
-        System.out.println(model.maxProfit(nums));
+        System.out.println(model.maxProfit1(nums));
     }
 }

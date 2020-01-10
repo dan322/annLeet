@@ -178,7 +178,7 @@ public class Main {
                 {'1', '1', '1', '1', '1', '0', '0', '0'},
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
-        int[] nums = {3,2,6,5,0,3};
-        System.out.println(model.maxProfit(1, nums));
+        int[] nums = {3, 3, 5, 0, 0, 3, 1, 4};
+        System.out.println(model.maxProfit2(2, nums));
     }
 }

@@ -3,7 +3,6 @@ package com.ann.leetCode.simple;
 public class LeetCode190ReverseBits {
 
     /**
-     * todo ann
      * @param n
      * @return
      */

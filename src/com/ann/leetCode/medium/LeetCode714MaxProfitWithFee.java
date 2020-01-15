@@ -2,6 +2,12 @@ package com.ann.leetCode.medium;
 
 public class LeetCode714MaxProfitWithFee {
 
+    /**
+     * three options (status): buy(1), sell(2), res(0)
+     * @param prices
+     * @param fee
+     * @return
+     */
     public int maxProfit(int[] prices, int fee) {
         if (prices.length < 2)
             return 0;
@@ -15,6 +21,13 @@ public class LeetCode714MaxProfitWithFee {
         return Math.max(profits[prices.length - 1][0], profits[prices.length - 1][2]);
     }
 
+    /**
+     * #1
+     * two options: at the end of i-th day, 1: hold a stock, 0: no stock in hand
+     * @param prices
+     * @param fee
+     * @return
+     */
     public int maxProfit1(int[] prices, int fee) {
         if (prices.length < 2)
             return 0;
@@ -27,6 +40,12 @@ public class LeetCode714MaxProfitWithFee {
         return profits[prices.length - 1][0];
     }
 
+    /**
+     * #2 improvement of #1
+     * @param prices
+     * @param fee
+     * @return
+     */
     public int maxProfit2(int[] prices, int fee) {
         if (prices.length < 2)
             return 0;
@@ -40,6 +59,7 @@ public class LeetCode714MaxProfitWithFee {
     }
 
     /**
+     * #3 improvement of #2
      * optimal of maxProfit2
      * @param prices
      * @param fee

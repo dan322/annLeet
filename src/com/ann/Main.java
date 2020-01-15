@@ -169,7 +169,7 @@ public class Main {
 //        LeetCode493ReversePairs model = new LeetCode493ReversePairs();
 //        int[] nums = {1, 3, 2, 3, 1};
 //        System.out.println(model.reversePairs(nums));
-        LeetCode714MaxProfitWithFee model = new LeetCode714MaxProfitWithFee();
+       /* LeetCode152MaxProduct model = new LeetCode152MaxProduct();
         String str = " +23457de798977534532";
         char[][] matrix = {
                 {'1', '1', '1', '1', '1', '1', '1', '1'},
@@ -178,7 +178,11 @@ public class Main {
                 {'1', '1', '1', '1', '1', '0', '0', '0'},
                 {'0', '1', '1', '1', '1', '0', '0', '0'},
         };
-        int[] nums = {1, 3, 2, 8, 4, 9};
-        System.out.println(model.maxProfit3(nums, 3));
+        int[] nums = {-2, 0, -1, -4};
+        System.out.println(model.maxProduct2(nums));*/
+       LeetCode322CoinChange model = new LeetCode322CoinChange();
+       int[] nums = {2,  5};
+       int num = 11;
+        System.out.println(model.coinChange(nums, num));
     }
 }

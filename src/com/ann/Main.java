@@ -181,8 +181,10 @@ public class Main {
         int[] nums = {-2, 0, -1, -4};
         System.out.println(model.maxProduct2(nums));*/
        LeetCode322CoinChange model = new LeetCode322CoinChange();
-       int[] nums = {2,  5};
-       int num = 11;
-        System.out.println(model.coinChange(nums, num));
+//       int[] nums = {186, 419, 83, 408};
+//       int num = 6249;
+        int[] nums = {2};
+        int num = 3;
+        System.out.println(model.coinChange1(nums, num));
     }
 }

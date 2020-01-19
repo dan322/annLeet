@@ -180,11 +180,11 @@ public class Main {
         };
         int[] nums = {-2, 0, -1, -4};
         System.out.println(model.maxProduct2(nums));*/
-       LeetCode322CoinChange model = new LeetCode322CoinChange();
+       LeetCode518CoinChange2 model = new LeetCode518CoinChange2();
 //       int[] nums = {186, 419, 83, 408};
 //       int num = 6249;
-        int[] nums = {2};
-        int num = 3;
-        System.out.println(model.coinChange1(nums, num));
+        int[] nums = {1, 2, 5};
+        int num = 11;
+        System.out.println(model.change1(num, nums));
     }
 }

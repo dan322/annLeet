@@ -3,6 +3,7 @@ package com.ann;
 //import com.ann.leetCode.medium.LeetCode153FindMin;
 import com.ann.leetCode.hard.LeetCode123MaxProfit3;
 import com.ann.leetCode.hard.LeetCode188MaxProfit4;
+import com.ann.leetCode.hard.LeetCode403CanCross;
 import com.ann.leetCode.hard.LeetCode493ReversePairs;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
@@ -180,11 +181,11 @@ public class Main {
         };
         int[] nums = {-2, 0, -1, -4};
         System.out.println(model.maxProduct2(nums));*/
-       LeetCode518CoinChange2 model = new LeetCode518CoinChange2();
+       LeetCode403CanCross model = new LeetCode403CanCross();
 //       int[] nums = {186, 419, 83, 408};
 //       int num = 6249;
-        int[] nums = {1, 2, 5};
-        int num = 11;
-        System.out.println(model.change1(num, nums));
+        int[] nums = {0,1,3,5,6,8,12,17};
+        int num = 500;
+        System.out.println(model.canCross2(nums));
     }
 }

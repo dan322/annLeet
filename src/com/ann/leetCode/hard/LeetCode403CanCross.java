@@ -42,7 +42,7 @@ public class LeetCode403CanCross {
         /**
          * ruguo 下面i从0开始，则可以舍弃判断
          */
-        if (stones[1] != 1)
+        if (stones[1] != 1 || stones[stones.length - 1] > (stones.length * (stones.length - 1) / 2))
             return false;
         if (stones.length == 2)
             return true;
@@ -83,5 +83,14 @@ public class LeetCode403CanCross {
             }
         }
         return dp.get(stones[stones.length - 1]).size() > 0;
+    }
+
+    /**
+     * todo ann use DFS
+     * @param stones
+     * @return
+     */
+    public boolean canCross3(int[] stones) {
+        return false;
     }
 }

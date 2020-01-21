@@ -1,10 +1,7 @@
 package com.ann;
 
 //import com.ann.leetCode.medium.LeetCode153FindMin;
-import com.ann.leetCode.hard.LeetCode123MaxProfit3;
-import com.ann.leetCode.hard.LeetCode188MaxProfit4;
-import com.ann.leetCode.hard.LeetCode403CanCross;
-import com.ann.leetCode.hard.LeetCode493ReversePairs;
+import com.ann.leetCode.hard.*;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
 import com.ann.sortTwo.MergeSort;
@@ -181,11 +178,12 @@ public class Main {
         };
         int[] nums = {-2, 0, -1, -4};
         System.out.println(model.maxProduct2(nums));*/
-       LeetCode403CanCross model = new LeetCode403CanCross();
+       LeetCode552CheckRecord2 model = new LeetCode552CheckRecord2();
 //       int[] nums = {186, 419, 83, 408};
 //       int num = 6249;
-        int[] nums = {0,1,3,5,6,8,12,17};
-        int num = 500;
-        System.out.println(model.canCross2(nums));
+        int[] nums = {7,10,5,10,8};
+        int num = 3;
+        String str = "PPALL";
+        System.out.println(model.checkRecord(1000));
     }
 }

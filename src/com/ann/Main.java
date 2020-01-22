@@ -184,6 +184,6 @@ public class Main {
         int[] nums = {7,10,5,10,8};
         int num = 3;
         String str = "PPALL";
-        System.out.println(model.checkRecord(1000));
+        System.out.println(model.checkRecord1(1000));
     }
 }

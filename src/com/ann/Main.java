@@ -1,6 +1,7 @@
 package com.ann;
 
 //import com.ann.leetCode.medium.LeetCode153FindMin;
+
 import com.ann.leetCode.hard.*;
 import com.ann.leetCode.medium.*;
 import com.ann.leetCode.simple.*;
@@ -178,10 +179,10 @@ public class Main {
         };
         int[] nums = {-2, 0, -1, -4};
         System.out.println(model.maxProduct2(nums));*/
-       LeetCode552CheckRecord2 model = new LeetCode552CheckRecord2();
+        LeetCode552CheckRecord2 model = new LeetCode552CheckRecord2();
 //       int[] nums = {186, 419, 83, 408};
 //       int num = 6249;
-        int[] nums = {7,10,5,10,8};
+        int[] nums = {7, 10, 5, 10, 8};
         int num = 3;
         String str = "PPALL";
 //        System.out.println(model.checkRecord1(1000));
@@ -202,15 +203,30 @@ public class Main {
         leetCode706MyHashMap.remove(2);
         System.out.println(leetCode706MyHashMap.get(2));*/
 
-        LeetCode705MyHashSet leetCode705MyHashSet = new LeetCode705MyHashSet();
-        leetCode705MyHashSet.add(1);
-        leetCode705MyHashSet.add(2);
-        System.out.println(leetCode705MyHashSet.contains(1));
-        System.out.println(leetCode705MyHashSet.contains(3));
-        leetCode705MyHashSet.add(2);
-        leetCode705MyHashSet.add(8);
-        System.out.println(leetCode705MyHashSet.contains(2));
-        leetCode705MyHashSet.remove(1);
-        System.out.println(leetCode705MyHashSet.contains(2));
+        //LeetCode705MyHashSet leetCode705MyHashSet = new LeetCode705MyHashSet();
+        //leetCode705MyHashSet.add(1);
+        //leetCode705MyHashSet.add(2);
+        //System.out.println(leetCode705MyHashSet.contains(1));
+        //System.out.println(leetCode705MyHashSet.contains(3));
+        //leetCode705MyHashSet.add(2);
+        //leetCode705MyHashSet.add(8);
+        //System.out.println(leetCode705MyHashSet.contains(2));
+        //leetCode705MyHashSet.remove(1);
+        //System.out.println(leetCode705MyHashSet.contains(2));
+
+        LeetCode622MyCircularQueue1 leetCode622MyCircularQueue = new LeetCode622MyCircularQueue1(3);
+        System.out.println(leetCode622MyCircularQueue.isEmpty());
+        System.out.println(leetCode622MyCircularQueue.isFull());
+
+        System.out.println(leetCode622MyCircularQueue.enQueue(1));
+        System.out.println(leetCode622MyCircularQueue.enQueue(2));
+        System.out.println(leetCode622MyCircularQueue.enQueue(3));
+        System.out.println(leetCode622MyCircularQueue.enQueue(4));
+        System.out.println(leetCode622MyCircularQueue.Rear());
+        System.out.println(leetCode622MyCircularQueue.isFull());
+        System.out.println(leetCode622MyCircularQueue.deQueue());
+        System.out.println(leetCode622MyCircularQueue.enQueue(4));
+        System.out.println(leetCode622MyCircularQueue.Rear());
+        System.out.println(leetCode622MyCircularQueue.isEmpty());
     }
 }

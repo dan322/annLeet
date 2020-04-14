@@ -184,6 +184,33 @@ public class Main {
         int[] nums = {7,10,5,10,8};
         int num = 3;
         String str = "PPALL";
-        System.out.println(model.checkRecord1(1000));
+//        System.out.println(model.checkRecord1(1000));
+
+      /*  LeetCode706MyHashMap leetCode706MyHashMap = new LeetCode706MyHashMap();
+        leetCode706MyHashMap.put(1, 1);
+        leetCode706MyHashMap.put(2, 2);
+        System.out.println(leetCode706MyHashMap.get(1));
+        System.out.println(leetCode706MyHashMap.get(3));
+        leetCode706MyHashMap.put(2, 1);
+        leetCode706MyHashMap.put(8, 10);
+        leetCode706MyHashMap.put(2, 2);
+        leetCode706MyHashMap.put(3, 3);
+        leetCode706MyHashMap.put(4, 4);
+        leetCode706MyHashMap.put(5, 5);
+        leetCode706MyHashMap.put(6, 6);
+        System.out.println(leetCode706MyHashMap.get(2));
+        leetCode706MyHashMap.remove(2);
+        System.out.println(leetCode706MyHashMap.get(2));*/
+
+        LeetCode705MyHashSet leetCode705MyHashSet = new LeetCode705MyHashSet();
+        leetCode705MyHashSet.add(1);
+        leetCode705MyHashSet.add(2);
+        System.out.println(leetCode705MyHashSet.contains(1));
+        System.out.println(leetCode705MyHashSet.contains(3));
+        leetCode705MyHashSet.add(2);
+        leetCode705MyHashSet.add(8);
+        System.out.println(leetCode705MyHashSet.contains(2));
+        leetCode705MyHashSet.remove(1);
+        System.out.println(leetCode705MyHashSet.contains(2));
     }
 }

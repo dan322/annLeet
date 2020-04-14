@@ -13,7 +13,7 @@ public class LeetCode706MyHashMap {
     public void put(int key, int value) {
         ensureCapacity(size);
         int index = hash(key, capacity);
-        if (data[index] == null) {
+        /*if (data[index] == null) {
             data[index] = new Node(key, value);
         } else {
             Node tailNode = data[index];
@@ -28,8 +28,21 @@ public class LeetCode706MyHashMap {
                 } else
                     tailNode = tailNode.getNext();
             }
+        }*/
+        // 头插法
+        Node current = data[index];
+        while (current != null) {
+            if (current.getKey() == key) {
+                current.setValue(value);
+                return;
+            }
+            current = current.getNext();
         }
+        Node newNode = new Node(key, value);
+        newNode.setNext(data[index]);
+        data[index] = newNode;
         size++;
+
     }
 
     public int get(int key) {

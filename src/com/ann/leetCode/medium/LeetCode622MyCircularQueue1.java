@@ -1,8 +1,12 @@
 package com.ann.leetCode.medium;
 
+/**
+ * 改进：线程不安全，会出现竞态条件  解决：ReentrantLock
+ */
 public class LeetCode622MyCircularQueue1 {
     private int[] data;
     private int headIndex;
+    // 或者  tailIndex=(headIndex+count−1)mod capacity   capacity:数组长度   count:队列长度
     private int tailIndex;
     private int capacity;
 

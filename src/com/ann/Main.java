@@ -214,7 +214,7 @@ public class Main {
         //leetCode705MyHashSet.remove(1);
         //System.out.println(leetCode705MyHashSet.contains(2));
 
-        LeetCode622MyCircularQueue1 leetCode622MyCircularQueue = new LeetCode622MyCircularQueue1(3);
+        /*LeetCode622MyCircularQueue2 leetCode622MyCircularQueue = new LeetCode622MyCircularQueue2(3);
         System.out.println(leetCode622MyCircularQueue.isEmpty());
         System.out.println(leetCode622MyCircularQueue.isFull());
 
@@ -228,5 +228,29 @@ public class Main {
         System.out.println(leetCode622MyCircularQueue.enQueue(4));
         System.out.println(leetCode622MyCircularQueue.Rear());
         System.out.println(leetCode622MyCircularQueue.isEmpty());
+
+        LeetCode641MyCircularDeque1 leetCode641MyCircularDeque = new LeetCode641MyCircularDeque1(3);
+        System.out.println(leetCode641MyCircularDeque.insertLast(1));
+        System.out.println(leetCode641MyCircularDeque.insertLast(2));
+        System.out.println(leetCode641MyCircularDeque.insertFront(3));
+        System.out.println(leetCode641MyCircularDeque.insertFront(4));
+        System.out.println(leetCode641MyCircularDeque.getRear());
+        System.out.println(leetCode641MyCircularDeque.isFull());
+        System.out.println(leetCode641MyCircularDeque.deleteLast());
+        System.out.println(leetCode641MyCircularDeque.insertFront(4));
+        System.out.println(leetCode641MyCircularDeque.getFront());*/
+
+        LeetCode707MyLinkedList leetCode707MyLinkedList = new LeetCode707MyLinkedList();
+        leetCode707MyLinkedList.addAtHead(1);
+        leetCode707MyLinkedList.addAtTail(3);
+//        leetCode707MyLinkedList.addAtHead(2);
+//        leetCode707MyLinkedList.addAtHead(1);
+        leetCode707MyLinkedList.addAtIndex(1, 2);
+        leetCode707MyLinkedList.deleteAtIndex(2);
+//        leetCode707MyLinkedList.addAtHead(6);
+//        leetCode707MyLinkedList.addAtTail(4);
+        System.out.println(leetCode707MyLinkedList.get(0));
+        leetCode707MyLinkedList.deleteAtIndex(1);
+        System.out.println(leetCode707MyLinkedList.get(1));
     }
 }

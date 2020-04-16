@@ -1,8 +1,11 @@
 package com.ann.leetCode.simple;
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class LeetCode104MaxDepth {
 
@@ -27,14 +30,30 @@ public class LeetCode104MaxDepth {
         return depth;
     }
 
-    // todo ann DFS 迭代
     public int maxDepth1(TreeNode root) {
-        return 0;
+        if (root == null)
+            return 0;
+        return 1 + Math.max(maxDepth1(root.left), maxDepth1(root.right));
     }
 
-    //递归 DFS
+    //递归 DFS use stack
     public int maxDepth2(TreeNode root) {
-        return 0;
+        if (root == null)
+            return 0;
+        int maxDepth = 0;
+        Stack<Pair<Integer, TreeNode>> stack = new Stack<>();
+        stack.push(new Pair(1, root));
+        if (!stack.isEmpty()) {
+            Pair<Integer, TreeNode> currentPair = stack.pop();
+            int depth = currentPair.getKey();
+            TreeNode node = currentPair.getValue();
+            if (node.left != null)
+                stack.push(new Pair<>(depth + 1, node.left));
+            if (node.right != null)
+                stack.push(new Pair<>(depth + 1, node.right));
+            maxDepth = Math.max(maxDepth, depth);
+        }
+        return maxDepth;
     }
 
 

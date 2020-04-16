@@ -240,17 +240,22 @@ public class Main {
         System.out.println(leetCode641MyCircularDeque.insertFront(4));
         System.out.println(leetCode641MyCircularDeque.getFront());*/
 
+        /*
         LeetCode707MyLinkedList leetCode707MyLinkedList = new LeetCode707MyLinkedList();
         leetCode707MyLinkedList.addAtHead(1);
         leetCode707MyLinkedList.addAtTail(3);
-//        leetCode707MyLinkedList.addAtHead(2);
-//        leetCode707MyLinkedList.addAtHead(1);
+        leetCode707MyLinkedList.addAtHead(2);
+        leetCode707MyLinkedList.addAtHead(1);
         leetCode707MyLinkedList.addAtIndex(1, 2);
         leetCode707MyLinkedList.deleteAtIndex(2);
-//        leetCode707MyLinkedList.addAtHead(6);
-//        leetCode707MyLinkedList.addAtTail(4);
+        leetCode707MyLinkedList.addAtHead(6);
+        leetCode707MyLinkedList.addAtTail(4);
         System.out.println(leetCode707MyLinkedList.get(0));
         leetCode707MyLinkedList.deleteAtIndex(1);
         System.out.println(leetCode707MyLinkedList.get(1));
+        */
+
+        LeetCode292CanWinNim leetCode292CanWinNim = new LeetCode292CanWinNim();
+        System.out.println(leetCode292CanWinNim.canWinNim(5));
     }
 }

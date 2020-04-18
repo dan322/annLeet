@@ -255,7 +255,11 @@ public class Main {
         System.out.println(leetCode707MyLinkedList.get(1));
         */
 
-        LeetCode292CanWinNim leetCode292CanWinNim = new LeetCode292CanWinNim();
-        System.out.println(leetCode292CanWinNim.canWinNim(5));
+//        LeetCode292CanWinNim leetCode292CanWinNim = new LeetCode292CanWinNim();
+//        System.out.println(leetCode292CanWinNim.canWinNim(5));
+
+        int[] numArr = {3, 1, 3};
+        LeetCode169MajorityElement leetCode169MajorityElement = new LeetCode169MajorityElement();
+        System.out.println(leetCode169MajorityElement.majorityElement(numArr));
     }
 }

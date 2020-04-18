@@ -24,7 +24,13 @@ public class LeetCode206ReverseList {
 
     // 递归 todo ann
     public ListNode reverseList1(ListNode head) {
-        return head;
+        if (head == null || head.next == null)
+            return head;
+        ListNode prevNode = reverseList(head.next);
+        // attention
+        head.next.next = head;
+        head.next = null;
+        return prevNode;
     }
 
     // 迭代 时间复杂度O(n)
@@ -42,12 +48,29 @@ public class LeetCode206ReverseList {
         return newHead;
     }
 
+    public ListNode getHead() {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        return head;
+    }
+
     class ListNode {
         int val;
         ListNode next;
 
         ListNode (int value) {
             val = value;
+        }
+    }
+
+    public static void main(String[] args) {
+        LeetCode206ReverseList leetCode206ReverseList = new LeetCode206ReverseList();
+        ListNode head = leetCode206ReverseList.reverseList1(leetCode206ReverseList.getHead());
+        while (head != null) {
+            System.out.println(head.val);
+            head = head.next;
         }
     }
 }

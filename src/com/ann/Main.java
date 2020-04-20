@@ -258,8 +258,8 @@ public class Main {
 //        LeetCode292CanWinNim leetCode292CanWinNim = new LeetCode292CanWinNim();
 //        System.out.println(leetCode292CanWinNim.canWinNim(5));
 
-        int[] numArr = {3, 1, 3};
+        int[] numArr = {1, 1, 2, 3, 3, 2, 2, 2, 2};
         LeetCode169MajorityElement leetCode169MajorityElement = new LeetCode169MajorityElement();
-        System.out.println(leetCode169MajorityElement.majorityElement(numArr));
+        System.out.println(leetCode169MajorityElement.majorityElement1(numArr));
     }
 }

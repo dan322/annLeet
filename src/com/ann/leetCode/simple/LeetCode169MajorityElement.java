@@ -1,7 +1,6 @@
 package com.ann.leetCode.simple;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class LeetCode169MajorityElement {
 
@@ -15,5 +14,20 @@ public class LeetCode169MajorityElement {
             hashMap.put(num, count + 1);
         }
         return -1;
+    }
+
+    public int majorityElement1(int[] nums) {
+        int count = 0;
+        int majorityEle = 0;
+        for (int num : nums) {
+            if (count == 0) {
+                majorityEle = num;
+                count++;
+            } else if (num != majorityEle)
+                count--;
+            else
+                count++;
+        }
+        return majorityEle;
     }
 }

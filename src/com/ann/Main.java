@@ -182,7 +182,7 @@ public class Main {
         LeetCode552CheckRecord2 model = new LeetCode552CheckRecord2();
 //       int[] nums = {186, 419, 83, 408};
 //       int num = 6249;
-        int[] nums = {7, 10, 5, 10, 8};
+//        int[] nums = {7, 10, 5, 10, 8};
         int num = 3;
         String str = "PPALL";
 //        System.out.println(model.checkRecord1(1000));
@@ -258,8 +258,22 @@ public class Main {
 //        LeetCode292CanWinNim leetCode292CanWinNim = new LeetCode292CanWinNim();
 //        System.out.println(leetCode292CanWinNim.canWinNim(5));
 
-        int[] numArr = {1, 1, 2, 3, 3, 2, 2, 2, 2};
+       /* int[] numArr = {1, 1, 2, 3, 3, 2, 2, 2, 2};
         LeetCode169MajorityElement leetCode169MajorityElement = new LeetCode169MajorityElement();
-        System.out.println(leetCode169MajorityElement.majorityElement1(numArr));
+        System.out.println(leetCode169MajorityElement.majorityElement1(numArr));*/
+
+      /* int n = 6;
+       LeetCode59GenerateMatrix leetCode59GenerateMatrix = new LeetCode59GenerateMatrix();
+       int[][] matrix = leetCode59GenerateMatrix.generateMatrix1(n);
+       for (int i = 0; i < n; ++i) {
+           for (int j = 0; j < n; ++j) {
+               System.out.print(matrix[i][j]);
+               System.out.print(" ");
+           }
+           System.out.println();
+       }*/
+      int[] nums = {1, 2, 3};
+      LeetCode78Subsets leetCode78Subsets = new LeetCode78Subsets();
+      leetCode78Subsets.subsets(nums);
     }
 }

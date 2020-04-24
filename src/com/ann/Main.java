@@ -274,6 +274,6 @@ public class Main {
        }*/
       int[] nums = {1, 2, 3};
       LeetCode78Subsets leetCode78Subsets = new LeetCode78Subsets();
-      leetCode78Subsets.subsets(nums);
+      leetCode78Subsets.subsets2(nums);
     }
 }

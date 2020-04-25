@@ -22,6 +22,10 @@ public class LeetCode146LRUCache2 {
     }
 
     public void put(int key, int value) {
+        if (hashLinked.containsKey(key))
+            hashLinked.remove(key);
+        else if (capacity == hashLinked.size())
+            hashLinked.remove(capacity - 1);
         hashLinked.put(key, value);
     }
 }

@@ -272,8 +272,17 @@ public class Main {
            }
            System.out.println();
        }*/
-      int[] nums = {1, 2, 3};
-      LeetCode78Subsets leetCode78Subsets = new LeetCode78Subsets();
-      leetCode78Subsets.subsets2(nums);
+//      int[] nums = {1, 2, 3};
+//      LeetCode46Permute leetCode46Permute = new LeetCode46Permute();
+//        leetCode46Permute.permute(nums);
+        int k = 1;
+        TreeNode root = new TreeNode(3);
+        TreeNode left = new TreeNode(1);
+        left.left = new TreeNode(-1);
+        left.right = new TreeNode(2);
+        root.left = left;
+        root.right = new TreeNode(4);
+        LeetCode230KthSmallest leetCode230KthSmallest = new LeetCode230KthSmallest();
+        System.out.println(leetCode230KthSmallest.kthSmallest2(root, 4));
     }
 }

@@ -275,7 +275,7 @@ public class Main {
 //      int[] nums = {1, 2, 3};
 //      LeetCode46Permute leetCode46Permute = new LeetCode46Permute();
 //        leetCode46Permute.permute(nums);
-        int k = 1;
+      /*  int k = 1;
         TreeNode root = new TreeNode(3);
         TreeNode left = new TreeNode(1);
         left.left = new TreeNode(-1);
@@ -283,6 +283,12 @@ public class Main {
         root.left = left;
         root.right = new TreeNode(4);
         LeetCode230KthSmallest leetCode230KthSmallest = new LeetCode230KthSmallest();
-        System.out.println(leetCode230KthSmallest.kthSmallest2(root, 4));
+        System.out.println(leetCode230KthSmallest.kthSmallest2(root, 4));*/
+
+//        LeetCode89GrayCode leetCode89GrayCode = new LeetCode89GrayCode();
+//        System.out.println(leetCode89GrayCode.grayCode(3));
+        int[] nums = {1, 2, 3, 4};
+        LeetCode238ProductExceptSelf leetCode238ProductExceptSelf = new LeetCode238ProductExceptSelf();
+        System.out.println(leetCode238ProductExceptSelf.productExceptSelf(nums));
     }
 }
